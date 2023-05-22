@@ -12,6 +12,9 @@ body {
 
 header {
   padding: 5% 10%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 
 header nav {
