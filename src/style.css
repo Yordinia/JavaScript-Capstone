@@ -1,15 +1,16 @@
 * {
-    box-sizing: content-box;
-    margin: 0;
-    padding: 0;
+  box-sizing: content-box;
+  margin: 0;
+  padding: 0;
 }
+
 body {
   height: 100vh;
   display: flex;
   flex-direction: column;
 }
 
-header nav{
+header nav {
   display: flex;
   justify-content: space-around;
 }
