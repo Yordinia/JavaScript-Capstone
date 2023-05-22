@@ -1,2 +1,2 @@
-# Koboal-JS--Capostone
+# JavaScript-Capstone
 A web app
