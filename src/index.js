@@ -23,19 +23,19 @@ async function fetchMeals() {
 const getCard = meal => {
   const card = `
   <div class="card border-primary mb-3" style="max-width: 20rem;">
-    <div class="card-header" id="header">
-      <img class= 'card-img-top' src = ${meal.strMealThumb} alt= ${meal.strMeal} ></img>
+    <div class="card-header" id="header"></div>
+    <div class="card-body">
+      <img class= 'card-img-top' src = url(/tryWithImages/alice_in_borderlan_mountains.png') alt= ${meal.strMeal} ></img>
       <div class= 'title-like-container'>  
         <h1>${meal.strMeal} </h1>
         <div class='display-flex-column'> 
           <i>' like icon goes here '</i> 
           <p class='no-of-likes'> 'no of likes' </p>  
         </div>
+      <div class= 'buttons'>
+        <button type="button" class="btn btn-dark">Comments</button>
+        <button type="button" class="btn btn-dark">Reservations</button>
       </div>
-    </div>
-    <div class="card-body">
-      <button type="button" class="btn btn-dark">Comments</button>
-      <button type="button" class="btn btn-dark">Orders</button>
     </div>
     </div>
   </div>`
@@ -52,5 +52,45 @@ meals.forEach(meal => {
   });
 }
 
+const definedData = () => {
+  const meals = [
+    {
+      id: 0,
+      strMeal: 'alice_in_borderlan_mountains',
+      strMealThumb: './tryWithImages/alice_in_borderlan_mountains.png'
+    }, ./try
+    {
+      id: 1,
+      strMeal: 'alice_in_borderlan_mountains',
+      strMealThumb: 'tryWithImages\alice_in_borderlan_Queen_of_heartss.png'
+    },
+    {
+      id: 2,
+      strMeal: 'alice_in_borderlan_Queen',
+      strMealThumb: 'tryWithImages/alice_in_borderlan_Queen.png'
+    },
+    {
+      id: 3,
+      strMeal: 'alice_in_borderland_ready_to_die',
+      strMealThumb: '/tryWithImages/alice_in_borderland_ready_to_die.png'
+    },
+    {
+      id: 4,
+      strMeal: 'alice_in_borderland_value_of_life',
+      strMealThumb: 'tryWithImages/alice_in_borderland_value_of_life.png'
+    },
+    {
+      id: 5,
+      strMeal: 'alice_in_borderland',
+      strMealThumb: 'tryWithImages/alice_in_borderland.png'
+    },
+  ]
+  return meals;
+}
+
+
 // Call the function to fetch and display random meals
-screenMeals(await fetchMeals());
+
+//screenMeals(await fetchMeals()); not working
+
+screenMeals(definedData())
