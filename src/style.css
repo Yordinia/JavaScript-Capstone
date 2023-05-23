@@ -64,9 +64,25 @@ header a:hover {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
-  background-color: aqua;
+  background-color: rgb(206, 203, 203);
+  margin: auto;
+  padding: 3rem;
 }
 
+.buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.title-like-container {
+  display: flex;
+  padding-top: 1rem;
+}
+
+.heart {
+  padding-top: 1.5rem;
+}
 
 footer {
   padding: 5% 10%;

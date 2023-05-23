@@ -6,8 +6,8 @@
   "main": "index.js",
   "scripts": {
     "test": "jest",
-    "start": "webpack serve --open --mode production",
-    "build": "webpack serve --open --mode development --config webpack.config.js"
+    "start": "webpack --mode production && webpack serve --open ",
+    "build": "webpack --mode development && webpack serve --open"
   },
   "keywords": [],
   "author": "",
