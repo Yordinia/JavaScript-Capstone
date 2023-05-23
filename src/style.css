@@ -7,14 +7,19 @@
 body {
   margin: 0;
   font-family: Inter, sans-serif;
+  display: flex;
+  flex-direction: column;
 }
-
 
 header {
   padding: 5% 10%;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+}
+
+#header {
+  font-family: "Cabin Sketch", cursive;
 }
 
 header nav {
@@ -29,23 +34,18 @@ header a {
   color: #000;
 }
 
-header a:hover {
-  text-decoration: bold;
-  color: grey;
-}
-
-nav ul{
+nav ul {
   list-style-type: none;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
 }
 
-nav ul li{
+nav ul li {
   margin-right: 35px;
 }
 
-nav ul li a{
+nav ul li a {
   text-decoration: none;
   color: #000;
 }
@@ -55,19 +55,21 @@ nav ul li a:hover {
   color: grey;
 }
 
+header a:hover {
+  text-decoration: bold;
+  color: grey;
+}
+
 .homepage {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 20px;  
-}
-
-.api {
+  gap: 20px;
   background-color: aqua;
 }
 
+
 footer {
   padding: 5% 10%;
+  margin: auto;
   margin-bottom: 0;
-  bottom: 0;
 }
-

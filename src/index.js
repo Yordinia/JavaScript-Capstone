@@ -23,10 +23,19 @@ async function fetchMeals() {
 const getCard = meal => {
   const card = `
   <div class="card border-primary mb-3" style="max-width: 20rem;">
-    <div class="card-header" id="header">Header</div>
+    <div class="card-header" id="header">
+      <img class= 'card-img-top' src = ${meal.strMealThumb} alt= ${meal.strMeal} ></img>
+      <div class= 'title-like-container'>  
+        <h1>${meal.strMeal} </h1>
+        <div class='display-flex-column'> 
+          <i>' like icon goes here '</i> 
+          <p class='no-of-likes'> 'no of likes' </p>  
+        </div>
+      </div>
+    </div>
     <div class="card-body">
-      <h5 class='card-title'> ${meal.strMeal} </h5>
-      <img class= 'card-img-top' src = ${meal.strMealThumb} alt= ${meal.strMeal} > </img>
+      <button type="button" class="btn btn-dark">Comments</button>
+      <button type="button" class="btn btn-dark">Orders</button>
     </div>
     </div>
   </div>`
@@ -37,7 +46,7 @@ const getCard = meal => {
 const screenMeals = meals => {
 const mealElement = document.getElementById('homepage');
 
-meals.forEach((meal,index) => {
+meals.forEach(meal => {
   const card = getCard(meal);
   mealElement.insertAdjacentHTML("beforeend",card);
   });
