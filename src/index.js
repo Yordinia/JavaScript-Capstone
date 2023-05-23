@@ -7,8 +7,8 @@ document.addEventListener('click', (event) => {
   if (event.target === close) {
     document.querySelector('.modal').classList.remove('view');
   }
-  comments.forEach((div,index) => {
-    if(event.target === div) {
+  comments.forEach((div, index) => {
+    if (event.target === div) {
       document.querySelector('.modal').classList.add('view');
       modal(index);
     }
@@ -16,10 +16,8 @@ document.addEventListener('click', (event) => {
 });
 
 const form = document.querySelector('#comment-form');
-if (form !== null){
-  
+if (form !== null) {
   form.addEventListener('submit', (e) => {
-    console.log('here');
     e.preventDefault();
   });
 }
