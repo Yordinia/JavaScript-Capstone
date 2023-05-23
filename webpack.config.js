@@ -1,5 +1,6 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 module.exports = {
   mode: 'development',
@@ -9,11 +10,18 @@ module.exports = {
   },
   devServer: {
     static: './dist',
+    // contentBase: path.resolve(__dirname, 'dist'),
+    // publicPath: '/',
   },
   plugins: [
     new HtmlWebpackPlugin({
       title: 'Output Management',
       template: './src/index.html',
+    }),
+    new CopyWebpackPlugin({
+      patterns: [
+        { from: 'src/imagesAlice', to: 'images' }
+      ]
     }),
   ],
   output: {
@@ -28,8 +36,15 @@ module.exports = {
         use: ['style-loader', 'css-loader'],
       },
       {
-        test: /\.(png|svg|jpg|jpeg|gif)$/,
-        use: ['file-loader'],
+        test: /\.(png|jpe?g|gif)$/i,
+        use: [
+          {
+            loader: 'file-loader',
+            options: {
+              name: 'myimages/[name].[ext]',
+            },
+          },
+        ],
       },
       {
         test: /\.html$/,

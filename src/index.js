@@ -59,32 +59,32 @@ const definedData = () => {
     {
       id: 0,
       strMeal: "alice_in_borderlan_mountains",
-      strMealThumb: "../src/images/alice_in_borderlan_mountains.png"
+      strMealThumb: "images/alice_in_borderlan_mountains.png"
     },
     {
       id: 1,
       strMeal: "alice_in_borderlan_mountains",
-      strMealThumb: "../src/images/alice_in_borderlan_Queen_of_heartss.png"
+      strMealThumb: "images/alice_in_borderlan_Queen_of_heartss.png"
     },
     {
       id: 2,
       strMeal: "alice_in_borderlan_Queen",
-      strMealThumb: "../src/images/alice_in_borderlan_Queen.png"
+      strMealThumb: "images/alice_in_borderlan_Queen.png"
     },
     {
       id: 3,
       strMeal: "alice_in_borderland_ready_to_die",
-      strMealThumb: "../src/images/alice_in_borderland_ready_to_die.png"
+      strMealThumb: "images/alice_in_borderland_ready_to_die.png"
     },
     {
       id: 4,
       strMeal: "alice_in_borderland_value_of_life",
-      strMealThumb: "../src/images/alice_in_borderland_value_of_life.png"
+      strMealThumb: "images/alice_in_borderland_value_of_life.png"
     },
     {
       id: 5,
       strMeal: "alice_in_borderland",
-      strMealThumb: "../src/images/alice_in_borderland.png"
+      strMealThumb: "images/alice_in_borderland.png"
     },
   ]
   return meals;
