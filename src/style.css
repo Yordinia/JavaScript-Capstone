@@ -55,6 +55,16 @@ nav ul li a:hover {
   color: grey;
 }
 
+.homepage {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;  
+}
+
+.api {
+  background-color: aqua;
+}
+
 footer {
   padding: 5% 10%;
   margin-bottom: 0;
