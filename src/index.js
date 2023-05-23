@@ -1,6 +1,6 @@
 import './style.css';
-import { modal, loadComments } from './modules/modal-block.js';
-import postComment from './modules/postComments.js';
+import { modal, loadComments } from './modules/modal-block';
+import postComment from './modules/postComments';
 
 document.addEventListener('click', (event) => {
   const comments = document.querySelectorAll('.comments');
@@ -15,14 +15,13 @@ document.addEventListener('click', (event) => {
     const name = document.querySelector('#name').value;
     const comment = document.querySelector('#comment').value;
     const ID = document.querySelector('.add-comment').id;
-    postComment(ID,name,comment).then(function(){
-        loadComments(ID);
+    postComment(ID, name, comment).then(() => {
+      loadComments(ID);
     });
-    
   }
 
-  comments.forEach((div,index) => {
-    if(event.target === div) {
+  comments.forEach((div, index) => {
+    if (event.target === div) {
       document.querySelector('.modal').classList.add('view');
       modal(index);
     }
@@ -30,8 +29,8 @@ document.addEventListener('click', (event) => {
 });
 
 const form = document.querySelector('.add-comment');
-if (form !== null){  
-  form.addEventListener('submit', (e) => {    
+if (form !== null) {
+  form.addEventListener('submit', (e) => {
     e.preventDefault();
   });
 }
