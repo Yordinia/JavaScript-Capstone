@@ -13,9 +13,10 @@ This task does not include the counter of the items. */
     
 // Function to make API request and create cards
 async function fetchMeals() {
-  const nineRandomMealsURL = 'https://www.themealdb.com/api/json/v1/1/random.php/9';
+  const nineRandomMealsURL = 'https://www.themealdb.com/api/json/v1/1/random.php';
   const response = await fetch(nineRandomMealsURL);
   const data = await response.json();
+  console.log('this is fetch, data =', data)
   return data.meals;
 }
 
@@ -36,9 +37,10 @@ const getCard = meal => {
 const screenMeals = meals => {
 const mealElement = document.getElementById('homepage');
 
-meals.forEach(meal => {
+meals.forEach((meal,index) => {
   const card = getCard(meal);
   mealElement.insertAdjacentHTML("beforeend",card);
+  console.log(index, ' - ', meal)
   });
 }
 
