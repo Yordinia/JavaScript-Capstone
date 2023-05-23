@@ -40,7 +40,6 @@ const mealElement = document.getElementById('homepage');
 meals.forEach((meal,index) => {
   const card = getCard(meal);
   mealElement.insertAdjacentHTML("beforeend",card);
-  console.log(index, ' - ', meal)
   });
 }
 
