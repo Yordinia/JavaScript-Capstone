@@ -46,11 +46,11 @@ const modal = async (index) => {
       // let details = getDetails(item.idMeal);
       // let detail1 = details;
       getDetails(item.idMeal).then((result) => {
-        modalbox.innerHTML = `<div class="modal-container">
-      <a href="#"><i class="fa-solid fa-xmark"></i></a>
+        modalbox.innerHTML = `<a href="#"><i class="fa-solid fa-xmark close-button"></i></a>
+      <div class="modal-container">      
       <img src="${item.strMealThumb}"/>
       <h2>${item.strMeal}</h2>
-      <p>${result}</p>
+      <p class="meal-details">${result}</p>
       <div class="comment-heading"><h2> Comments </h2></div>
       <div class = 'comment-box'>
 

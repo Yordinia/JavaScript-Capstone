@@ -83,6 +83,7 @@ footer {
   position: fixed;
   margin: 5% 5%;
   width: 90%;
+  height: 90vh;
   overflow-y: auto;
   background-color: #fff;
   border: 2px solid #000;
@@ -94,12 +95,22 @@ footer {
   display: block;
 }
 
+.close-button {
+  float: right;
+  padding: 2% 5%;
+  font-size: 30px;
+}
+
 .modal-container {
   width: 100%;
   padding: 5% 2%;
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+.meal-details {
+  padding: 2% 7%;
 }
 
 .modal-container img {
