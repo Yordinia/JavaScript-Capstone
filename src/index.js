@@ -61,22 +61,28 @@ import './style.css';
 // // Call the function to fetch and display random meals
 
 // screenMeals(await fetchMeals());
-import { createApiId, getLikes } from './mod/code';
+import { createApiId, getLikes, setLikes } from './mod/code';
 
 const apiUrl = "https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/"
 
-let id= await createApiId(apiUrl);
+let id= "9vUKLfgfPbeVlsgu5dzp"
+//await createApiId(apiUrl);
 
 // Assume you have an element with an associated like count
-const elementId = "element-id";
-let likeCount = await getLikes({apiUrl, id}) || 0; // The current number of likes for the element
-
+const elementId = "another-element-id";
+let likeCount =  await getLikes({apiUrl, id}) || 0; // The current number of likes for the element
+// CUT 
 // Prepare the data payload
-const data = {
-  item_id: elementId,
-  like_count: likeCount,
-};
 
+const handleLikes = async () => {
+  console.log('like count', likeCount)
+  likeCount += 1;
+  await setLikes({apiUrl, id}, {
+    item_id: elementId,
+    like_count: likeCount,
+  });
+  updateDom();
+}
  // storing likes
 const createButton = () => {
   const el = document.createElement('button')
@@ -84,47 +90,21 @@ const createButton = () => {
   el.classList.add('btn','btn-secondary')
   el.style.width = "max-content"
   el.style.alignSelf = 'center'
-  el.textContent = '0 likes'
-  el.onclick = () => handleLikes;
+  el.textContent = `I have ${likeCount} likes`
+  el.onclick = handleLikes;
   document.body.appendChild(el)
 }
 
-const handleLikes = async () => {
-  likeCount += 1;
-  console.log('just clicked ', el, 'like count is', likeCount);
-  setLikes();
-  updateDom();
-}
 
 const updateDom = async () => {
   const el = document.getElementById(elementId);
-  el.textContent = `${likeCount} likes`;
+  console.log('this is like count', likeCount)
+  let x = await likeCount;
+  el.textContent = `I have ${likeCount} likes`;
+ //createButton();
 }
-// Make a POST request to store the like information
-const setLikes = async () => {
-const res = await fetch(`${apiUrl}${id}/likes`, {
-  method: 'POST',
-  headers: {
-    'Content-Type': 'application/json',
-  },
-  body: JSON.stringify(data),
-});
-
-if (res.ok) {
-  console.log('Like information POST successfully.', res);
-  console.log('this is response.text', await res.text())
-} else {
-  console.log('Failed to store like information:', res.status);
-}
-}
-
-
-
-
-
-createApiId();
 createButton();
-updateDom();
+
 /*
 {
   method: 'POST',
