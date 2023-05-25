@@ -32,11 +32,6 @@ nav ul li {
   margin-right: 35px;
 }
 
-header a:hover {
-  font-weight: bold;
-  color: grey;
-}
-
 nav ul li a {
   text-decoration: none;
   color: #000;
@@ -44,6 +39,11 @@ nav ul li a {
 
 .modal-container a {
   font-size: 25px;
+}
+
+header a:hover {
+  font-weight: bold;
+  color: grey;
 }
 
 nav ul li a:hover {
