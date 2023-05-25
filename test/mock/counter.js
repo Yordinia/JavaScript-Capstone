@@ -1,6 +1,6 @@
-const counter = (classname='.heart') => {
+const counter = (classname = '.heart') => {
   // like number from DOM
-  let len = document.querySelectorAll(classname).length;
+  const len = document.querySelectorAll(classname).length;
   return len;
 };
 
