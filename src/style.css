@@ -30,7 +30,7 @@ header nav {
 }
 
 header a {
-  text-decoration: none;
+  font-weight: bold;
   color: #000;
 }
 
@@ -50,13 +50,13 @@ nav ul li a {
   color: #000;
 }
 
-nav ul li a:hover {
-  text-decoration: bold;
+header a:hover {
+  font-weight: bold;
   color: grey;
 }
 
-header a:hover {
-  text-decoration: bold;
+nav ul li a:hover {
+  font-weight: bold;
   color: grey;
 }
 
