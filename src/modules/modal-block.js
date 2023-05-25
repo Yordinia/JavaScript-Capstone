@@ -21,8 +21,13 @@ const loadComments = (id) => {
       commentscount.innerHTML = '';
       const commentcount = getCommentCount(result);
       const heading = document.createElement('h2');
-      heading.innerHTML = `Comments (${commentcount})`;
-      commentscount.appendChild(heading);
+      if (commentcount !== undefined) {
+        heading.innerHTML = `Comments (${commentcount})`;
+        commentscount.appendChild(heading);
+      } else {
+        heading.innerHTML = `Comments (0)`;
+        commentscount.appendChild(heading);
+      }
     }
     comments.innerHTML = '';
     if (result[0]) {
