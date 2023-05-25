@@ -7,6 +7,8 @@
 body {
   margin: 0;
   font-family: Inter, sans-serif;
+  display: flex;
+  flex-direction: column;
 }
 
 header {
@@ -14,6 +16,10 @@ header {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+}
+
+#header {
+  font-family: "Cabin Sketch", cursive;
 }
 
 header nav {
@@ -24,7 +30,7 @@ header nav {
 }
 
 header a {
-  text-decoration: none;
+  font-weight: bold;
   color: #000;
 }
 
@@ -33,16 +39,12 @@ nav ul li a {
   color: #000;
 }
 
-.modal-container a {
-  font-size: 25px;
-}
-
 header a:hover {
-  font-weight: bold;
+  text-decoration: bold;
   color: grey;
 }
 
-nav ul {
+nav ul{
   list-style-type: none;
   display: flex;
   flex-direction: row;
@@ -53,35 +55,51 @@ nav ul li {
   margin-right: 35px;
 }
 
+nav ul li a{
+  text-decoration: none;
+  color: #000;
+}
+
 nav ul li a:hover {
   font-weight: bold;
   color: grey;
 }
 
-footer {
-  padding: 5% 10%;
-  margin-bottom: 0;
-  bottom: 0;
-}
-
-.main {
-  padding: 0% 10%;
+.homepage {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  row-gap: 1em;
+  gap: 20px;
+  background-color: rgb(206, 203, 203);
+  margin: auto;
+  padding: 3rem;
 }
 
-.comments {
-  width: 80%;
-  padding: 5% 5%;
-  background-color: black;
-  color: #fff;
+.buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.title-like-container {
+  display: flex;
+  padding-top: 1rem;
+}
+
+.heart {
+  padding-top: 1.5rem;
+}
+
+footer {
+  padding: 5% 10%;
+  margin: auto;
+  margin-bottom: 0;
 }
 
 .modal {
   display: none;
   position: fixed;
-  margin: 5% 5%;
+  margin: 2% 5%;
+  height: 95vh;
   width: 90%;
   overflow-y: auto;
   background-color: #fff;
@@ -139,4 +157,12 @@ footer {
   padding: 2% 2%;
   margin-bottom: 10px;
   background-color: #fff;
+}
+
+@media screen and (max-width: 768px) {
+  .homepage {
+    grid-template-columns: repeat(1, 1fr);
+    padding: 1rem;
+    min-width: 12rem;
+  }
 }
