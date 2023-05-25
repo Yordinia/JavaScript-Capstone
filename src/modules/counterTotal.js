@@ -1,6 +1,8 @@
-const counter = (className = '.card') => {
+const counterTotal = ( meals) => {
+  const className = '.card';
   // like number from DOM
   const totalMeals = document.querySelectorAll(className);
-  console.log('totalMeals', totalMeals, 'leng', totalMeals.length);
+  let flag = (totalMeals.length === meals.length)
+  return flag;
 };
-export default counter;
+export default counterTotal;
