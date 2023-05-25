@@ -36,6 +36,16 @@ nav ul li {
   font-size: 25px;
 }
 
+nav ul li a {
+  text-decoration: none;
+  color: #000;
+}
+
+nav ul li a:hover {
+  font-weight: bold;
+  color: grey;
+}
+
 header a:hover {
   font-weight: bold;
   color: grey;
@@ -46,16 +56,6 @@ nav ul {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-}
-
-nav ul li a {
-  text-decoration: none;
-  color: #000;
-}
-
-nav ul li a:hover {
-  font-weight: bold;
-  color: grey;
 }
 
 footer {
