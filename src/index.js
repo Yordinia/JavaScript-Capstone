@@ -1,13 +1,15 @@
 /* Task 12 requirements
 
-When the page loads, the webapp the Involvement API to show the item likes and combines them with the data from the base API.
+When the page loads, the webapp the Involvement API to show the item
+likes and combines them with the data from the base API.
 
 Remember that your page should make only 2 requests:
 
 - one to the base API
 - and one to the Involvement API.
 
-This task does not include displaying the likes button (heart icon on the wireframe) for each item.
+This task does not include displaying the likes button (heart icon on the
+  wireframe) for each item.
  */
 
 import './style.css';
@@ -16,11 +18,11 @@ import './style.css';
 async function fetchMeals() {
   const mealsURL = 'https://www.themealdb.com/api/json/v1/1/filter.php?c=Chicken';
   const response = await fetch(mealsURL);
-  const {meals} = await response.json();
+  const { meals } = await response.json();
   return meals;
 }
 
-const getCard = meal => {
+const getCard = (meal) => {
   const card = `
   <div class="card border-primary mb-3" style="max-width: 20rem;">
     <div class="card-header" id="header">
@@ -44,21 +46,20 @@ const getCard = meal => {
         <button type="button" class="btn btn-dark">Reservations</button>
       </div>
     </div>
-  </div>`
+  </div>`;
   return card;
-}
+};
 
 // display all 9 random meals
-const screenMeals = meals => {
-const mealElement = document.getElementById('homepage');
+const screenMeals = (meals) => {
+  const mealElement = document.getElementById('homepage');
 
-meals.forEach(meal => {
-  const card = getCard(meal);
-  mealElement.insertAdjacentHTML("beforeend", card);
+  meals.forEach((meal) => {
+    const card = getCard(meal);
+    mealElement.insertAdjacentHTML('beforeend', card);
   });
-}
+};
 
 // Call the function to fetch and display random meals
 
 screenMeals(await fetchMeals());
-
