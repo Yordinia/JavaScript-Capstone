@@ -28,7 +28,7 @@ const loadComments = (id) => {
     if (result !== null) {
       const commentscount = document.querySelector('.comment-heading');
       commentscount.innerHTML = '';
-      const commentcount = getCommentCount('.each-comment');;
+      const commentcount = getCommentCount('.each-comment');
       const heading = document.createElement('h2');
       heading.innerHTML = `Comments (${commentcount})`;
       commentscount.appendChild(heading);

@@ -1,7 +1,6 @@
 import './style.css';
 import { modal, loadComments } from './modules/modal-block.js';
 import postComment from './modules/postComments.js';
-import getCommentCount from './modules/getCommentCount.js';
 
 document.addEventListener('click', (event) => {
   const comments = document.querySelectorAll('.comments');
