@@ -34,8 +34,8 @@ document.addEventListener('click', async (event) => {
     const { likes } = allLikes.find((like) => like.item_id === id);
     updateDom(buttonEl, likes);
     // check count
-    counter();
-    console.log('fetch updated (hopefully)', likes);
+    const test = counter(id, likes);
+    console.log('fetch updated (hopefully successfully), TEST is - ', test);
   }
 });
 

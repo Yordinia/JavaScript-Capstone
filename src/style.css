@@ -80,11 +80,8 @@ nav ul li a:hover {
 
 .title-like-container {
   display: flex;
+  justify-content: space-between;
   padding-top: 1rem;
-}
-
-.heart {
-  padding-top: 1.5rem;
 }
 
 footer {
