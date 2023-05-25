@@ -1,7 +1,7 @@
 import getCommentCount from '../src/modules/getCommentCount.js';
 
 describe('Comment Count', () => {
-  test('Output should be ', () => {
+  test('Output should be 0', () => {
     const output = getCommentCount('.comment');
     expect(output).toBe(0);
   });
