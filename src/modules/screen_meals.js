@@ -18,7 +18,7 @@ const getCard = (meal, { likes }) => {
   
       <div class="card-body">
         <div class= 'buttons'>
-          <button type="button" class="btn btn-dark">Comments</button>
+          <button type="button" class="btn btn-dark comments">Comments</button>
           <button type="button" class="btn btn-dark">Reservations</button>
         </div>
       </div>
