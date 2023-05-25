@@ -16,21 +16,22 @@ async function getDetails(mealid) {
 const loadComments = (id) => {
   getComments(id).then((result) => {
     const comments = document.querySelector('.comment-box');
-    if (result !== null) {
-      const commentscount = document.querySelector('.comment-heading');
-      commentscount.innerHTML = '';
-      const commentcount = getCommentCount(result);
-      const heading = document.createElement('h2');
-      heading.innerHTML = `Comments (${commentcount})`;
-      commentscount.appendChild(heading);
-    }
     comments.innerHTML = '';
     if (result[0]) {
       result.forEach((item) => {
         const Element = document.createElement('p');
+        Element.setAttribute('class', 'view-comment');
         Element.innerHTML = `${item.creation_date} ${item.username}: ${item.comment}`;
         comments.appendChild(Element);
       });
+      if (result !== null) {
+        const commentscount = document.querySelector('.comment-heading');
+        commentscount.innerHTML = '';
+        const commentcount = getCommentCount('.view-comment');
+        const heading = document.createElement('h2');
+        heading.innerHTML = `Comments (${commentcount})`;
+        commentscount.appendChild(heading);
+      }
     }
   });
 };
