@@ -45,21 +45,15 @@ nav ul li {
   margin-right: 35px;
 }
 
-nav ul li a {
+.hover-zoom {
   text-decoration: none;
   color: #000;
   transition: font-weight 0.3s ease, font-size 0.3s ease;
 }
 
-header a:hover {
+.hover-zoom:hover {
   font-weight: bold;
-  font-size: 20px;
-  color: grey;
-}
-
-nav ul li a:hover {
-  font-weight: bold;
-  font-size: 20px;
+  font-size: 120%;
   color: grey;
 }
 
