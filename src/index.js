@@ -4,6 +4,7 @@ import getLikes from './modules/get_number_of_likes.js';
 import setLikes from './modules/set_number_of_likes.js';
 import fetchMeals from './modules/fetch_meals.js';
 import updateDom from './modules/update_dom.js';
+import counter from './modules/counter.js';
 
 async function fetchMealsAndLikes() {
   const meals = await fetchMeals();
@@ -32,6 +33,8 @@ document.addEventListener('click', async (event) => {
     const { allLikes } = await fetchMealsAndLikes();
     const { likes } = allLikes.find((like) => like.item_id === id);
     updateDom(buttonEl, likes);
+    // check count
+    counter();
     console.log('fetch updated (hopefully)', likes);
   }
 });
