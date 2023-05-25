@@ -30,7 +30,7 @@ header nav {
 }
 
 header a {
-  text-decoration: none;
+  font-weight: bold;
   color: #000;
 }
 
@@ -91,4 +91,12 @@ footer {
   padding: 5% 10%;
   margin: auto;
   margin-bottom: 0;
+}
+
+@media screen and (max-width: 768px) {
+  .homepage {
+    grid-template-columns: repeat(1, 1fr);
+    padding: 1rem;
+    min-width: 12rem;
+  }
 }
