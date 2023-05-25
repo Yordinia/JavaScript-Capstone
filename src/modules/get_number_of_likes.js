@@ -12,11 +12,11 @@ This task does not include displaying the likes button (heart icon on the
   wireframe) for each item.
  */
 
-const getLikes = async (meal) => {
+const getLikes = async () => {
   const apiUrl = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/';
   const idUrl = '9vUKLfgfPbeVlsgu5dzp';
 
-  const response = await fetch(`${apiUrl}${idUrl}/likes/`).catch((error) => console.log('Fetch Error'));
+  const response = await fetch(`${apiUrl}${idUrl}/likes/`).catch((error) => console.log('Fetch Error', error));
   let data;
   const isJson = (response.headers.get('Content-type') === 'application/json');
   if (isJson) {

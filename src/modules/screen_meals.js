@@ -1,15 +1,3 @@
-const screenMeals = ({ all_meals: meals, all_likes: likes }) => {
-  let like;
-  const mealElement = document.getElementById('homepage');
-  meals.forEach((meal) => {
-    like = likes.find((like) => like.item_id === meal.idMeal) || { item_id: meal.idMeal, likes: 0 };
-    const card = getCard(meal, like);
-    mealElement.insertAdjacentHTML('beforeend', card);
-  });
-  console.log('Posting, fething');
-  console.log('Done screening meals');
-};
-
 const getCard = (meal, { likes }) => {
   const card = `
     <div class="card border-primary mb-3" style="max-width: 20rem;">
@@ -37,6 +25,18 @@ const getCard = (meal, { likes }) => {
     </div>`;
 
   return card;
+};
+
+const screenMeals = ({ allMeals: meals, allLikes: likes }) => {
+  let like;
+  const mealElement = document.getElementById('homepage');
+  meals.forEach((meal) => {
+    like = likes.find((like) => like.item_id === meal.idMeal) || { item_id: meal.idMeal, likes: 0 };
+    const card = getCard(meal, like);
+    mealElement.insertAdjacentHTML('beforeend', card);
+  });
+  console.log('Posting, fething');
+  console.log('Done screening meals');
 };
 
 export default screenMeals;

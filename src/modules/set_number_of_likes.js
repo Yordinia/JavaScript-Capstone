@@ -10,7 +10,7 @@ const setLikes = async (id) => {
       item_id: id,
     }),
   });
-  return await response.text();
+  return response.text();
 };
 
 export default setLikes;
