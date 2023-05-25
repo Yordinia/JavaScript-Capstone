@@ -25,7 +25,7 @@ const loadComments = (id) => {
         heading.innerHTML = `Comments (${commentcount})`;
         commentscount.appendChild(heading);
       } else {
-        heading.innerHTML = `Comments (0)`;
+        heading.innerHTML = 'Comments (0)';
         commentscount.appendChild(heading);
       }
     }
