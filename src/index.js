@@ -1,23 +1,23 @@
+/* Task 12 requirements
+
+When the page loads, the webapp the Involvement API to show the item likes and combines them with the data from the base API.
+
+Remember that your page should make only 2 requests:
+
+- one to the base API
+- and one to the Involvement API.
+
+This task does not include displaying the likes button (heart icon on the wireframe) for each item.
+ */
+
 import './style.css';
 
-/* These are the tasks for this branch
-
-When the page loads, the webapp retrieves data from the selected API and shows the list of items on screen with the basic data (e.g. title + image).
-
-/Prepare also "Comments" and "Reservations" buttons. They should be doing nothing - just being displayed.
-
-This task does not include displaying the number of likes for each item.
-
-This task does not include the counter of the items. */
-
-    
 // Function to make API request and create cards
 async function fetchMeals() {
-  const meals = 'https://www.themealdb.com/api/json/v1/1/filter.php?c=Chicken';
-  const response = await fetch(meals);
-  const data = await response.json();
-  const first9Meals = data.meals.filter((m,i)=> i<9);
-  return first9Meals;
+  const mealsURL = 'https://www.themealdb.com/api/json/v1/1/filter.php?c=Chicken';
+  const response = await fetch(mealsURL);
+  const {meals} = await response.json();
+  return meals;
 }
 
 const getCard = meal => {
