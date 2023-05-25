@@ -9,6 +9,9 @@
     "start": "webpack serve --open --mode production",
     "build": "webpack serve --open --mode development --config webpack.config.js"
   },
+  "jest":{
+    "testEnvironment": "jsdom"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
@@ -22,6 +25,7 @@
     "hint": "^7.1.8",
     "html-webpack-plugin": "^5.5.1",
     "jest": "^29.5.0",
+    "jest-environment-jsdom": "^29.5.0",
     "style-loader": "^3.3.3",
     "stylelint": "^13.13.1",
     "stylelint-config-standard": "^21.0.0",

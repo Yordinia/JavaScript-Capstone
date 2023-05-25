@@ -16,26 +16,22 @@ async function getDetails(mealid) {
 const loadComments = (id) => {
   getComments(id).then((result) => {
     const comments = document.querySelector('.comment-box');
-    if (result !== null) {
-      const commentscount = document.querySelector('.comment-heading');
-      commentscount.innerHTML = '';
-      const commentcount = getCommentCount(result);
-      const heading = document.createElement('h2');
-      if (commentcount !== undefined) {
-        heading.innerHTML = `Comments (${commentcount})`;
-        commentscount.appendChild(heading);
-      } else {
-        heading.innerHTML = 'Comments (0)';
-        commentscount.appendChild(heading);
-      }
-    }
     comments.innerHTML = '';
     if (result[0]) {
       result.forEach((item) => {
         const Element = document.createElement('p');
+        Element.setAttribute('class', 'each-comment');
         Element.innerHTML = `${item.creation_date} ${item.username}: ${item.comment}`;
         comments.appendChild(Element);
       });
+    }
+    if (result !== null) {
+      const commentscount = document.querySelector('.comment-heading');
+      commentscount.innerHTML = '';
+      const commentcount = getCommentCount('.each-comment');;
+      const heading = document.createElement('h2');
+      heading.innerHTML = `Comments (${commentcount})`;
+      commentscount.appendChild(heading);
     }
   });
 };

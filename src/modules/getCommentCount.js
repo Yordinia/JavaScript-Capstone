@@ -1,3 +1,5 @@
-const getCommentCount = (array) => array.length;
+const getCommentCount = ((classname) => {
+  return document.querySelectorAll(classname).length;
+});
 
 export default getCommentCount;

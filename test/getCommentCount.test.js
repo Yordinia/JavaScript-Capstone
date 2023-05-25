@@ -2,15 +2,18 @@ import getCommentCount from '../src/modules/getCommentCount.js';
 
 describe('Comment Count', () => {
   test('Output should be ', () => {
-    const comments = [];
-    const output = getCommentCount(comments);
+    const output = getCommentCount('.comment');
     expect(output).toBe(0);
   });
 
-  test('Output should be 1', () => {
-    const comments = [{ id: '1' }];
-    const output = getCommentCount(comments);
+  test('Output should be 2', () => {
+    document.body.innerHTML =
+    '<div>' +
+    '  <p class="comment">Azeem: Great work</p>' +
+    '  <p class="comment">Misal: Very Nice </p>' +
+    '</div>';
+    const output = getCommentCount('.comment');
 
-    expect(output).toBe(1);
+    expect(output).toBe(2);
   });
 });
