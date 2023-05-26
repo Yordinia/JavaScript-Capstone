@@ -189,6 +189,16 @@ footer {
   background-repeat: no-repeat;
 }
 
+.meal-details {
+  padding: 2% 7%;
+}
+
+.close-button {
+  float: right;
+  padding: 2% 5%;
+  font-size: 30px;
+}
+
 @media screen and (max-width: 768px) {
   .homepage {
     grid-template-columns: repeat(1, 1fr);
