@@ -7,12 +7,13 @@
     - [Tech Stack](#tech-stack)
     - [Key Features](#key-features)
 - [💻 Getting Started](#getting-started)
-  - [Setup](#setup)
+  - [Deployment](#live-demo)
+  - [Authors Zoom Recording](#zoom)
   - [Prerequisites](#prerequisites)
+  - [Setup](#setup)
   - [Install](#install)
   - [Usage](#usage)
   - [Run tests](#run-tests)
-  - [Deployment](#triangular_flag_on_post-deployment)
 - [👥 Authors](#authors)
 - [🔭 Future Features](#future-features)
 - [🤝 Contributing](#contributing)
@@ -26,6 +27,12 @@
 **JavaScript Capstone Project meals app** is a progressive web app that displays meals fetched from an API, and also displays comments about the meal submitted by different viewers. It also allows you like a certain element, thanks to the additional Capstone-API provided by microverse.
 
 ## 🛠 Built With <a name="built-with"></a>
+
+- **Node NPM manager**
+- **Front-end dev languages**
+- **Served with webpack**
+- **Deployed with gh-pages**
+- **Tested with Jest**
 
 ### Tech Stack <a name="tech-stack"></a>
 
@@ -55,14 +62,17 @@
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
-## 🚀 Live Demo <a name="live-demo"></a>
-[JavaScript-Capstone](https://yorinia.github.io/JavaScript-Capstone/dist/)
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
 <!-- GETTING STARTED -->
 
 ## 💻 Getting Started <a name="getting-started"></a>
+
+## 🚀 Live Demo <a name="live-demo"></a>
+[JavaScript-Capstone](https://yorinia.github.io/JavaScript-Capstone/dist/)
+
+## 🚀 Zoom Video (explanation) <a name="zoom"></a>
+[Author's Explanation](https://drive.google.com/file/d/1UiVaUWXq7xTGcRfd5qR4ujbL2HQR6b1j/view?usp=sharing)
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
 To get a local copy up and running, follow these steps.
