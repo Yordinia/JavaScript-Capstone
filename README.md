@@ -69,7 +69,7 @@
 ## 💻 Getting Started <a name="getting-started"></a>
 
 ## 🚀 Live Demo <a name="live-demo"></a>
-[JavaScript-Capstone](https://yorinia.github.io/JavaScript-Capstone/dist/)
+- Coming Soon
 
 ## 🚀 Zoom Video (explanation) <a name="zoom"></a>
 [Author's Explanation](https://drive.google.com/file/d/1UiVaUWXq7xTGcRfd5qR4ujbL2HQR6b1j/view?usp=sharing)
