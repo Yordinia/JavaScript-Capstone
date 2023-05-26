@@ -2,26 +2,31 @@ import counter from './mock/counter.js';
 
 const { JSDOM } = require('jsdom');
 
-let dom;
+let dom; let
+  hr;
 beforeEach(() => {
   // Arrange
   dom = new JSDOM('<!doctype html><html><body><h1> Testing count function!</h1></body></html>');
   global.document = dom.window.document;
   global.window = dom.window;
   global.navigator = dom.window.navigator;
+  hr = () => {
+    console.log('````````````````````````````````````````');
+  };
 });
 
 const testCountZero = () => {
   // Act
   console.log('this is test A - testCountZero');
   const likesElementLength = counter();
-
+  hr();
   // Asserstion
   expect(likesElementLength).toBe(0);
 };
 
 const testCountThree = () => {
   console.log('this is test B - testCountThree');
+  hr();
   // Arrange
   const ele = `
     <div>
