@@ -30,7 +30,34 @@ header nav {
 }
 
 header a {
+  text-decoration: none;
+  color: #000;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #000;
+}
+
+nav ul li a,
+.btn {
+  text-decoration: none;
+  color: #000;
+  transition: font-weight 0.3s ease, font-size 0.3s ease;
+}
+
+.modal-container a {
+  font-size: 25px;
+}
+
+header a:hover {
   font-weight: bold;
+  color: grey;
+}
+
+nav ul li a:hover {
+  font-weight: bold;
+  color: grey;
   color: #000;
 }
 
@@ -41,15 +68,21 @@ nav ul {
   justify-content: space-between;
 }
 
-nav ul li {
-  margin-right: 35px;
+.main {
+  padding: 0% 10%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  row-gap: 1em;
 }
 
-nav ul li a,
-.btn {
-  text-decoration: none;
-  color: #000;
-  transition: font-weight 0.3s ease, font-size 0.3s ease;
+.comments {
+  width: 80%;
+  padding: 10% 5%;
+  color: #fff;
+}
+
+nav ul li {
+  margin-right: 35px;
 }
 
 nav ul li a:hover,
