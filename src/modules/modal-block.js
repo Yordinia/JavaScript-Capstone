@@ -8,7 +8,7 @@ const getMealDetail = async (mealid) => {
   return recipe[0].strInstructions;
 };
 
-async function getDetails(mealid) {
+const getDetails = async (mealid) => {
   const details = await (getMealDetail(mealid));
   return details;
 }
@@ -44,8 +44,6 @@ const modal = async (index) => {
     if (index === index1) {
       const modalbox = document.querySelector('.modal');
       modalbox.innerHTML = '';
-      // let details = getDetails(item.idMeal);
-      // let detail1 = details;
       getDetails(item.idMeal).then((result) => {
         modalbox.innerHTML = `<a href="#"><i class="fa-solid fa-xmark close-button"></i></a>
       <div class="modal-container">      

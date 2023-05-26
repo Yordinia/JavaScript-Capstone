@@ -33,10 +33,6 @@ document.addEventListener('click', async (event) => {
     const { allLikes } = await fetchMealsAndLikes();
     const { likes } = allLikes.find((like) => like.item_id === id);
     updateDom(buttonEl, likes);
-    // test count
-    // const test = counter(id, likes);
-    // test totalCount
-    // const test2 = counterTotal(allMeals);
   }
 });
 
