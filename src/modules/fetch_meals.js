@@ -3,6 +3,6 @@ const fetchMeals = async () => {
   const response = await fetch(mealsURL);
   const { meals } = await response.json();
   return meals;
-}
+};
 
 export default fetchMeals;

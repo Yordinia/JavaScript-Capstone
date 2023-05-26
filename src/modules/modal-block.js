@@ -11,7 +11,7 @@ const getMealDetail = async (mealid) => {
 const getDetails = async (mealid) => {
   const details = await (getMealDetail(mealid));
   return details;
-}
+};
 
 const loadComments = (id) => {
   getComments(id).then((result) => {

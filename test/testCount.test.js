@@ -1,6 +1,5 @@
 import counter from './mock/counter';
 
-
 const testCountZero = () => {
   const likesElementLength = counter();
   expect(likesElementLength).toBe(0);
