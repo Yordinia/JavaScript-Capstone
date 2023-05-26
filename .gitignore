@@ -1,2 +1,3 @@
 node_modules
-test\testPracticeJsdom-test.js
+test/testPracticeJsdom-test.js
+git commit -m "Remove file.js from repository"
