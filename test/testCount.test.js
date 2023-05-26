@@ -1,4 +1,4 @@
-import counter from './mock/counter.js';
+import counter from './mock/counter';
 
 const { JSDOM } = require('jsdom');
 
@@ -11,13 +11,11 @@ beforeEach(() => {
   global.window = dom.window;
   global.navigator = dom.window.navigator;
   hr = () => {
-    console.log('````````````````````````````````````````');
   };
 });
 
 const testCountZero = () => {
   // Act
-  console.log('this is test A - testCountZero');
   const likesElementLength = counter();
   hr();
   // Asserstion
@@ -25,7 +23,6 @@ const testCountZero = () => {
 };
 
 const testCountThree = () => {
-  console.log('this is test B - testCountThree');
   hr();
   // Arrange
   const ele = `

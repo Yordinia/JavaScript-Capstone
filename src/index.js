@@ -1,12 +1,11 @@
 import './style.css';
-import screenMeals from './modules/screen_meals.js';
-import getLikes from './modules/get_number_of_likes.js';
-import setLikes from './modules/set_number_of_likes.js';
-import fetchMeals from './modules/fetch_meals.js';
-import updateDom from './modules/update_dom.js';
-import counter from './modules/counter.js';
-import counterTotal from './modules/counterTotal';
-import { modal } from './modules/modal-block.js';
+import { modal, loadComments } from './modules/modal-block';
+import postComment from './modules/postComments';
+import screenMeals from './modules/screen_meals';
+import getLikes from './modules/get_number_of_likes';
+import setLikes from './modules/set_number_of_likes';
+import fetchMeals from './modules/fetch_meals';
+import updateDom from './modules/update_dom';
 
 async function fetchMealsAndLikes() {
   const meals = await fetchMeals();
@@ -29,17 +28,15 @@ document.addEventListener('click', async (event) => {
 
   if (flag) {
     // set /POST likes
-    const res = await setLikes(id);
-    if (res === 'Created') console.log('Updated like to API sucessfully');
+    await setLikes(id);
 
-    const { allMeals, allLikes } = await fetchMealsAndLikes();
+    const { allLikes } = await fetchMealsAndLikes();
     const { likes } = allLikes.find((like) => like.item_id === id);
     updateDom(buttonEl, likes);
     // test count
-    const test = counter(id, likes);
+    // const test = counter(id, likes);
     // test totalCount
-    const test2 = counterTotal(allMeals);
-    console.log('fetch updated (hopefully successfully), TESTs are - ', test === test2);
+    // const test2 = counterTotal(allMeals);
   }
 });
 
@@ -48,8 +45,19 @@ screenMeals(await fetchMealsAndLikes());
 document.addEventListener('click', (event) => {
   const comments = document.querySelectorAll('.comments');
   const close = document.querySelector('.fa-xmark');
+  const submit = document.querySelector('#comment-submit');
   if (event.target === close) {
     document.querySelector('.modal').classList.remove('view');
+    document.querySelector('.modal').innerHTML = '';
+  }
+
+  if (event.target === submit) {
+    const name = document.querySelector('#name').value;
+    const comment = document.querySelector('#comment').value;
+    const ID = document.querySelector('.add-comment').id;
+    postComment(ID, name, comment).then(() => {
+      loadComments(ID);
+    });
   }
 
   comments.forEach((div, index) => {

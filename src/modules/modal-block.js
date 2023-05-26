@@ -1,4 +1,4 @@
-import getComments from './getComments.js';
+import getComments from './getComments';
 
 const getMealDetail = async (mealid) => {
   const url = `https://www.themealdb.com/api/json/v1/1/lookup.php?i=${mealid}`;
@@ -11,6 +11,7 @@ async function getDetails(mealid) {
   const details = await (getMealDetail(mealid));
   return details;
 }
+
 const loadComments = (id) => {
   getComments(id).then((result) => {
     const comments = document.querySelector('.comment-box');
@@ -24,6 +25,7 @@ const loadComments = (id) => {
     }
   });
 };
+
 const modal = async (index) => {
   const APIurl = 'https://www.themealdb.com/api/json/v1/1/filter.php?c=Chicken';
   const response = await fetch(APIurl);
@@ -42,13 +44,13 @@ const modal = async (index) => {
       <p>${result}</p>
       <h2> Comments </h2>
       <div class = 'comment-box'>
-
+      
       </div>
       <h2>Add a Comment</h2>
       <form  id="${item.idMeal}" class="add-comment">
         <input id="name" type="text" placeholder="Your Name" required>
         <textarea id="comment" type="text" maxlength="500" placeholder="Your Insights" required></textarea>
-        <button id="comment-submit" type="button">Comment</button>
+        <button id="comment-submit" type="submit">Comment</button>
       </form>
       </div>`;
         loadComments(item.idMeal);

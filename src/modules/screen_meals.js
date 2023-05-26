@@ -37,8 +37,6 @@ const screenMeals = ({ allMeals: meals, allLikes: likes }) => {
     mealElement.insertAdjacentHTML('beforeend', card);
     countElement.textContent = index + 1;
   });
-  console.log('Posting, fething');
-  console.log('Done screening meals');
 };
 
 export default screenMeals;
