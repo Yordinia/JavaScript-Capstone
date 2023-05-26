@@ -1,4 +1,6 @@
-# JavaScript-Capstone
+![](https://img.shields.io/badge/Microverse-blueviolet)
+
+# 📖 JavaScript Capstone Project -  Meals App
 
 # 📗 Table of Contents
 
