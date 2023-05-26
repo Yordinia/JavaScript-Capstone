@@ -24,7 +24,6 @@ const getCard = (meal, { likes }) => {
         </div>
       </div>
     </div>`;
-
   return card;
 };
 

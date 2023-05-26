@@ -34,16 +34,6 @@ header a {
   color: #000;
 }
 
-nav ul li a {
-  text-decoration: none;
-  color: #000;
-}
-
-header a:hover {
-  font-weight: bold;
-  color: grey;
-}
-
 nav ul {
   list-style-type: none;
   display: flex;
@@ -55,13 +45,15 @@ nav ul li {
   margin-right: 35px;
 }
 
-.hover-zoom {
+nav ul li a,
+.btn {
   text-decoration: none;
   color: #000;
   transition: font-weight 0.3s ease, font-size 0.3s ease;
 }
 
-.hover-zoom:hover {
+nav ul li a:hover,
+.btn:hover {
   font-weight: bold;
   font-size: 120%;
   color: grey;
@@ -156,6 +148,12 @@ footer {
   padding: 2% 2%;
   margin-bottom: 10px;
   background-color: #fff;
+}
+
+.custom-background {
+  background-image: url('https://www.themealdb.com/images/media/meals/sstssx1487349585.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 @media screen and (max-width: 768px) {
