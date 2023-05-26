@@ -31,7 +31,6 @@ document.addEventListener('click', async (event) => {
   if (flag) {
     // set /POST likes
     const res = await setLikes(id);
-    if (res === 'Created') console.log('Updated like to API sucessfully');
 
     const { allMeals, allLikes } = await fetchMealsAndLikes();
     const { likes } = allLikes.find((like) => like.item_id === id);
@@ -40,7 +39,6 @@ document.addEventListener('click', async (event) => {
     const test = counter(id, likes);
     // test totalCount
     const test2 = counterTotal(allMeals);
-    console.log('fetch updated (hopefully successfully), TESTs are - ', test === test2);
   }
 });
 
