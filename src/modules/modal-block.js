@@ -1,5 +1,5 @@
-import getComments from './getComments.js';
-import getCommentCount from './getCommentCount.js';
+import getComments from './getComments';
+import getCommentCount from './getCommentCount';
 
 const getMealDetail = async (mealid) => {
   const url = `https://www.themealdb.com/api/json/v1/1/lookup.php?i=${mealid}`;
