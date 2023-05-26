@@ -44,7 +44,7 @@ const modal = async (index) => {
       <p>${result}</p>
       <h2> Comments </h2>
       <div class = 'comment-box'>
-
+      
       </div>
       <h2>Add a Comment</h2>
       <form  id="${item.idMeal}" class="add-comment">
