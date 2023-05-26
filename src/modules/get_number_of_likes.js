@@ -1,17 +1,3 @@
-/* Task 12 requirements
-
-When the page loads, the webapp the Involvement API to show the item
-likes and combines them with the data from the base API.
-
-Remember that your page should make only 2 requests:
-
-- one to the base API
-- and one to the Involvement API.
-
-This task does not include displaying the likes button (heart icon on the
-  wireframe) for each item.
- */
-
 const getLikes = async () => {
   const apiUrl = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/';
   const idUrl = '9vUKLfgfPbeVlsgu5dzp';

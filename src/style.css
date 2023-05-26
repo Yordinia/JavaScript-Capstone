@@ -55,6 +55,18 @@ nav ul li {
   margin-right: 35px;
 }
 
+.hover-zoom {
+  text-decoration: none;
+  color: #000;
+  transition: font-weight 0.3s ease, font-size 0.3s ease;
+}
+
+.hover-zoom:hover {
+  font-weight: bold;
+  font-size: 120%;
+  color: grey;
+}
+
 .homepage {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -72,11 +84,8 @@ nav ul li {
 
 .title-like-container {
   display: flex;
+  justify-content: space-between;
   padding-top: 1rem;
-}
-
-.heart {
-  padding-top: 1.5rem;
 }
 
 footer {

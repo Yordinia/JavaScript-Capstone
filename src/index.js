@@ -4,6 +4,8 @@ import getLikes from './modules/get_number_of_likes.js';
 import setLikes from './modules/set_number_of_likes.js';
 import fetchMeals from './modules/fetch_meals.js';
 import updateDom from './modules/update_dom.js';
+import counter from './modules/counter.js';
+import counterTotal from './modules/counterTotal';
 import modal from './modules/modal-block.js';
 
 async function fetchMealsAndLikes() {
@@ -30,10 +32,14 @@ document.addEventListener('click', async (event) => {
     const res = await setLikes(id);
     if (res === 'Created') console.log('Updated like to API sucessfully');
 
-    const { allLikes } = await fetchMealsAndLikes();
+    const { allMeals, allLikes } = await fetchMealsAndLikes();
     const { likes } = allLikes.find((like) => like.item_id === id);
     updateDom(buttonEl, likes);
-    console.log('fetch updated (hopefully)', likes);
+    // test count
+    const test = counter(id, likes);
+    // test totalCount
+    const test2 = counterTotal(allMeals);
+    console.log('fetch updated (hopefully successfully), TESTs are - ', test === test2);
   }
 });
 
