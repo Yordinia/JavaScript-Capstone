@@ -19,8 +19,8 @@ const getCard = (meal, { likes }) => {
   
       <div class="card-body">
         <div class= 'buttons'>
-          <button type="button" class="btn btn-dark comments hover-zoom">Comments</button>
-          <button type="button" class="btn btn-dark hover-zoom">Reservations</button>
+          <button type="button" class="btn btn-dark comments">Comments</button>
+          <button type="button" class="btn btn-dark">Reservations</button>
         </div>
       </div>
     </div>`;

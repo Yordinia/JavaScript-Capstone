@@ -59,7 +59,7 @@ header a:hover {
 
 nav ul li a:hover {
   font-weight: bold;
-  font-size: 20px;
+  font-size: 120%;
   color: grey;
 }
 
