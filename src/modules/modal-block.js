@@ -20,18 +20,18 @@ const loadComments = (id) => {
     if (result[0]) {
       result.forEach((item) => {
         const Element = document.createElement('p');
-        Element.setAttribute('class', 'view-comment');
+        Element.setAttribute('class', 'each-comment');
         Element.innerHTML = `${item.creation_date} ${item.username}: ${item.comment}`;
         comments.appendChild(Element);
       });
-      if (result !== null) {
-        const commentscount = document.querySelector('.comment-heading');
-        commentscount.innerHTML = '';
-        const commentcount = getCommentCount('.view-comment');
-        const heading = document.createElement('h2');
-        heading.innerHTML = `Comments (${commentcount})`;
-        commentscount.appendChild(heading);
-      }
+    }
+    if (result !== null) {
+      const commentscount = document.querySelector('.comment-heading');
+      commentscount.innerHTML = '';
+      const commentcount = getCommentCount('.each-comment');
+      const heading = document.createElement('h2');
+      heading.innerHTML = `Comments (${commentcount})`;
+      commentscount.appendChild(heading);
     }
   });
 };
@@ -47,11 +47,11 @@ const modal = async (index) => {
       // let details = getDetails(item.idMeal);
       // let detail1 = details;
       getDetails(item.idMeal).then((result) => {
-        modalbox.innerHTML = `<div class="modal-container">
-      <a href="#"><i class="fa-solid fa-xmark"></i></a>
+        modalbox.innerHTML = `<a href="#"><i class="fa-solid fa-xmark close-button"></i></a>
+      <div class="modal-container">      
       <img src="${item.strMealThumb}"/>
       <h2>${item.strMeal}</h2>
-      <p>${result}</p>
+      <p class="meal-details">${result}</p>
       <div class="comment-heading"><h2> Comments </h2></div>
       <div class = 'comment-box'>
 

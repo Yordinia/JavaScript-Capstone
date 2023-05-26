@@ -9,6 +9,9 @@
     "start": "webpack --mode production && webpack serve --open ",
     "build": "webpack --mode development && webpack serve --open"
   },
+  "jest":{
+    "testEnvironment": "jsdom"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",

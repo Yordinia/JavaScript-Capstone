@@ -59,6 +59,8 @@ document.addEventListener('click', (event) => {
       postComment(ID, name, comment).then(() => {
         loadComments(ID);
       });
+      document.querySelector('#name').value = '';
+      document.querySelector('#comment').value = '';
     }
   }
 
