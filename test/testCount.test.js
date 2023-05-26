@@ -1,6 +1,6 @@
 import counter from './mock/counter';
 
-/*const { JSDOM } = require('jsdom');
+/* const { JSDOM } = require('jsdom');
 
 let dom; let
   hr;
@@ -12,7 +12,7 @@ beforeEach(() => {
   global.navigator = dom.window.navigator;
   hr = () => {
   };
-});*/
+}); */
 
 const testCountZero = () => {
   // Act
