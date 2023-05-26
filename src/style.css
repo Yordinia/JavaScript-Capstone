@@ -7,6 +7,8 @@
 body {
   margin: 0;
   font-family: Inter, sans-serif;
+  display: flex;
+  flex-direction: column;
 }
 
 header {
@@ -14,6 +16,10 @@ header {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+}
+
+#header {
+  font-family: "Cabin Sketch", cursive;
 }
 
 header nav {
@@ -33,6 +39,13 @@ nav ul li a {
   color: #000;
 }
 
+nav ul li a,
+.btn {
+  text-decoration: none;
+  color: #000;
+  transition: font-weight 0.3s ease, font-size 0.3s ease;
+}
+
 .modal-container a {
   font-size: 25px;
 }
@@ -42,26 +55,17 @@ header a:hover {
   color: grey;
 }
 
+nav ul li a:hover {
+  font-weight: bold;
+  color: grey;
+  color: #000;
+}
+
 nav ul {
   list-style-type: none;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-}
-
-nav ul li {
-  margin-right: 35px;
-}
-
-nav ul li a:hover {
-  font-weight: bold;
-  color: grey;
-}
-
-footer {
-  padding: 5% 10%;
-  margin-bottom: 0;
-  bottom: 0;
 }
 
 .main {
@@ -73,15 +77,53 @@ footer {
 
 .comments {
   width: 80%;
-  padding: 5% 5%;
-  background-color: black;
+  padding: 10% 5%;
   color: #fff;
+}
+
+nav ul li {
+  margin-right: 35px;
+}
+
+nav ul li a:hover,
+.btn:hover {
+  font-weight: bold;
+  font-size: 120%;
+  color: grey;
+}
+
+.homepage {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  background-color: rgb(206, 203, 203);
+  margin: auto;
+  padding: 3rem;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.title-like-container {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 1rem;
+}
+
+footer {
+  padding: 5% 10%;
+  margin: auto;
+  margin-bottom: 0;
 }
 
 .modal {
   display: none;
   position: fixed;
-  margin: 5% 5%;
+  margin: 2% 5%;
+  height: 95vh;
   width: 90%;
   overflow-y: auto;
   background-color: #fff;
@@ -132,4 +174,25 @@ footer {
   padding: 2% 2%;
   margin-bottom: 10px;
   resize: none;
+}
+
+.add-comment button {
+  width: 25%;
+  padding: 2% 2%;
+  margin-bottom: 10px;
+  background-color: #fff;
+}
+
+.custom-background {
+  background-image: url('https://www.themealdb.com/images/media/meals/sstssx1487349585.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+@media screen and (max-width: 768px) {
+  .homepage {
+    grid-template-columns: repeat(1, 1fr);
+    padding: 1rem;
+    min-width: 12rem;
+  }
 }
