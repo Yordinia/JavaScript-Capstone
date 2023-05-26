@@ -1,4 +1,4 @@
-import counter from './mock/counter.js';
+import counter from './mock/counter';
 
 const { JSDOM } = require('jsdom');
 
