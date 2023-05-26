@@ -45,13 +45,15 @@ nav ul li {
   margin-right: 35px;
 }
 
-nav ul li a, .btn {
+nav ul li a,
+.btn {
   text-decoration: none;
   color: #000;
   transition: font-weight 0.3s ease, font-size 0.3s ease;
 }
 
-nav ul li a:hover, .btn:hover {
+nav ul li a:hover,
+.btn:hover {
   font-weight: bold;
   font-size: 120%;
   color: grey;
