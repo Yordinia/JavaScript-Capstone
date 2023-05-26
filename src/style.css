@@ -34,10 +34,6 @@ header a {
   color: #000;
 }
 
-nav ul li {
-  margin-right: 35px;
-}
-
 nav ul li a {
   text-decoration: none;
   color: #000;
@@ -47,6 +43,7 @@ nav ul li a {
   font-size: 25px;
 }
 
+
 header a:hover {
   font-weight: bold;
   color: grey;
@@ -55,7 +52,6 @@ header a:hover {
 nav ul li a:hover {
   font-weight: bold;
   color: grey;
-  font-weight: bold;
   color: #000;
 }
 
@@ -64,12 +60,6 @@ nav ul {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-}
-
-footer {
-  padding: 5% 10%;
-  margin-bottom: 0;
-  bottom: 0;
 }
 
 .main {
