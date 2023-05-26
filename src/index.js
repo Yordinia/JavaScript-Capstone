@@ -6,6 +6,7 @@ import fetchMeals from './modules/fetch_meals.js';
 import updateDom from './modules/update_dom.js';
 import counter from './modules/counter.js';
 import counterTotal from './modules/counterTotal';
+import modal from './modules/modal-block.js';
 
 async function fetchMealsAndLikes() {
   const meals = await fetchMeals();
@@ -43,3 +44,24 @@ document.addEventListener('click', async (event) => {
 });
 
 screenMeals(await fetchMealsAndLikes());
+
+document.addEventListener('click', (event) => {
+  const comments = document.querySelectorAll('.comments');
+  const close = document.querySelector('.fa-xmark');
+  if (event.target === close) {
+    document.querySelector('.modal').classList.remove('view');
+  }
+  comments.forEach((div, index) => {
+    if (event.target === div) {
+      document.querySelector('.modal').classList.add('view');
+      modal(index);
+    }
+  });
+});
+
+const form = document.querySelector('#comment-form');
+if (form !== null) {
+  form.addEventListener('submit', (e) => {
+    e.preventDefault();
+  });
+}
