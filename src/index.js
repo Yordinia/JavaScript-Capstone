@@ -55,9 +55,11 @@ document.addEventListener('click', (event) => {
     const name = document.querySelector('#name').value;
     const comment = document.querySelector('#comment').value;
     const ID = document.querySelector('.add-comment').id;
-    postComment(ID, name, comment).then(() => {
-      loadComments(ID);
-    });
+    if (name !== '' && comment !== '') {
+      postComment(ID, name, comment).then(() => {
+        loadComments(ID);
+      });
+    }
   }
 
   comments.forEach((div, index) => {
