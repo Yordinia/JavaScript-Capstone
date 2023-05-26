@@ -150,6 +150,12 @@ footer {
   background-color: #fff;
 }
 
+.custom-background {
+  background-image: url('https://www.themealdb.com/images/media/meals/sstssx1487349585.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
 @media screen and (max-width: 768px) {
   .homepage {
     grid-template-columns: repeat(1, 1fr);
