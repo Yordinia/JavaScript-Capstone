@@ -1,6 +1,6 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
-# 📖 JavaScript Capstone Project -  Meals App
+# 📖 JavaScript Capstone Project - Meals App
 
 # 📗 Table of Contents
 
@@ -22,7 +22,6 @@
 - [⭐️ Show your support](#support)
 - [🙏 Acknowledgements](#acknowledgements)
 - [📝 License](#license)
-
 
 # 📖 JavaScript Capstone Project meals app <a name="about-project"></a>
 
@@ -51,44 +50,39 @@
   </ul>
 </details>
 
-
 ### Key Features <a name="key-features"></a>
 
 - **use gitflow**
 - **connect to the Meals API**
 - **sends, receives and deisplay data from these two APIs.**
-    - **[Meals API](https://www.themealdb.com/api/json/v1/1/filter.php?c=Chicken)**
-    - **[Interactive API](https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/9vUKLfgfPbeVlsgu5dzp)**
-
+  - **[Meals API](https://www.themealdb.com/api/json/v1/1/filter.php?c=Chicken)**
+  - **[Interactive API](https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/9vUKLfgfPbeVlsgu5dzp)**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
 
 <!-- GETTING STARTED -->
 
 ## 💻 Getting Started <a name="getting-started"></a>
 
 ## 🚀 Live Demo <a name="live-demo"></a>
+
 - Coming Soon
 
 ## 🚀 Zoom Video (explanation) <a name="zoom"></a>
+
 [Author's Explanation](https://drive.google.com/file/d/1UiVaUWXq7xTGcRfd5qR4ujbL2HQR6b1j/view?usp=sharing)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
 
 To get a local copy up and running, follow these steps.
 
 ### Prerequisites
 
-Run the following commands, in order to run this project:
-    - `npm install`
-    - For tests `npm i jest-environment-jsdom --save-dev && npm test`
+Run the following commands, in order to run this project: - `npm install` - For tests `npm i jest-environment-jsdom --save-dev && npm test`
 
 ### Setup
 
 Clone this repository to your desired folder:
-
 
 ```sh
   cd my-folder
@@ -99,7 +93,6 @@ Clone this repository to your desired folder:
 
 Install this project with:
 
-
 ```sh
   cd JavaScript-Capstone
   npm install
@@ -107,12 +100,9 @@ Install this project with:
 
 ### Usage
 
-To use this project 
-    - Run `npm start` or `npm run build`
-    - Open `index.html` from /dist with your prefered browser
+To use this project - Run `npm start` or `npm run build` - Open `index.html` from /dist with your prefered browser
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
 
 ## 👥 Author <a name="authors"></a>
 
@@ -133,7 +123,6 @@ To use this project
 <!-- FUTURE FEATURES -->
 
 ## 🔭 Future Features <a name="future-features"></a>
-
 
 - [ ] **Set up the resevations section**
 - [ ] **Better UI, speed and interactivity**
@@ -162,7 +151,6 @@ If you like this project please give a star ⭐️ to this project
 
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
-
 I would like to thank Microverse team, coding partners for the amazing collobrating project
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -170,6 +158,5 @@ I would like to thank Microverse team, coding partners for the amazing collobrat
 ## 📝 License <a name="license"></a>
 
 This project is [MIT](https://github.com/Yordinia/yordinia/blob/main/LICENCE.md) licensed.
-
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
